@@ -20,6 +20,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     public FrmPrincipal() {
         initComponents();
         this.libros = new ArrayList<>();
+        this.estudiantes = new ArrayList<>();
     }
 
     public static boolean confirmar(String pregunta){
@@ -63,6 +64,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         lblTitulo.setText("Sistema de Registro de Biblioteca");
 
         btnRegEst.setText("Registrar Estudiante");
+        btnRegEst.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegEstActionPerformed(evt);
+            }
+        });
 
         btnRegLib.setText("Registrar Libro");
         btnRegLib.addActionListener(new java.awt.event.ActionListener() {
@@ -139,6 +145,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
         new FrmRegistrarLibros(getLibros()).setVisible(true);
     }//GEN-LAST:event_btnRegLibActionPerformed
 
+    private void btnRegEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegEstActionPerformed
+        new FrmEstudiante(getEstudiantes()).setVisible(true);
+    }//GEN-LAST:event_btnRegEstActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -192,5 +202,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
     public void setLibros(ArrayList<Libro> libros) {
         this.libros = libros;
     }
+    
+    private ArrayList<Estudiante> estudiantes;
 
+    public ArrayList<Estudiante> getEstudiantes() {
+        return estudiantes;
+    }
+
+    public void setEstudiantes(ArrayList<Estudiante> estudiantes) {
+        this.estudiantes = estudiantes;
+    }
 }

@@ -76,6 +76,8 @@ public class FrmRegistrarLibros extends javax.swing.JFrame {
         lblAnioPub.setFont(new java.awt.Font("Fira Sans", 0, 18)); // NOI18N
         lblAnioPub.setText("Año de publicación:");
 
+       
+
         btnRegistrar.setFont(new java.awt.Font("Fira Sans", 1, 18)); // NOI18N
         btnRegistrar.setText("Registrar");
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +85,7 @@ public class FrmRegistrarLibros extends javax.swing.JFrame {
                 btnRegistrarActionPerformed(evt);
             }
         });
+
 
         btnVolver.setFont(new java.awt.Font("Fira Sans", 1, 18)); // NOI18N
         btnVolver.setText("Volver");
@@ -185,6 +188,10 @@ public class FrmRegistrarLibros extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Por favor rellene todos los campos", "Campos vacíos", 2);
         }
     }//GEN-LAST:event_btnRegistrarActionPerformed
+
+    private void txtTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTituloActionPerformed
 
     /**
      * @param args the command line arguments
